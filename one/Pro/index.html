@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<title>小demo</title>
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+	<link rel="stylesheet" type="text/css" href="css/progress.css">
+	<link rel="stylesheet" type="text/css" href="css/shops.css">
+	<link rel="stylesheet" type="text/css" href="css/foodslist.css">
+</head>
+<body>
+	<div class="section" style="display: none;" id="home">
+		<div class="home-wrap">
+			<div class="h-head">
+					<a href="#javascript:void(0)">登陆</a>
+					<a href="#javascript:void(0)">注册</a>
+			</div>		
+			<div class="h-location">
+				<div class="hlcation">
+					<span class="curCity">当前定位城市：</span>
+					<span class="notic">定位不准时，请在城市列表中选择</span>
+				</div>
+				<a href="#search-1-%E4%B8%8A%E6%B5%B7" class="locaCity">上海 <span class="city-arrow">></span></a>
+			</div>
+			<div class="h-hot">
+				<div class="hot-title">
+					热门城市
+				</div>
+				<div class="city-list">
+				</div>
+			</div>
+			<div class="h-letter">
+			</div>
+			<div class="h-citys">
+				<div class="citys-wrap">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section" style="display: none;" id="search">
+		<div class="search-wrap">
+			<div class="s-title">
+				<a class="s-back" href="#home"> < </a>
+				<div class="s-location">上海</div>
+				<a class="s-tabCity" href="#home">切换城市</a>
+			</div>
+			<div class="s-content">
+				<form action="#">
+					<input type="hidden" name="city_id" value="3">
+					<input type="hidden" name="type" value="search">
+					<input class="searchinp" type="text" name="keyword" value="" placeholder="输入学校、商务楼、地址">
+					<button id="query">搜索</button>
+				</form>
+			</div>
+			<div class="s-citylist"></div>
+		</div>
+	</div>
+	<div class="section" style="display: none;" id="shops">
+		<div class="shop-wrap">
+			<div class="sp-title">
+				<a class="fa fa-search fa-lg" id="goSearch"></a>
+				<div class="sp-address"></div>
+				<div class="sp-login">登陆</div>
+			</div>
+			<div class="sp-slide swiper-container">
+					<div class="slide-wrap swiper-wrapper"></div>
+					<div class="swiper-pagination"></div>	
+			</div>
+			<div class="sp-list">
+				<div class="nearby">附近商家</div>
+				<div class="list-wrap"></div>
+			</div>
+		</div>
+		<i id="backto-top" class="fa fa-arrow-circle-up fa-lg"></i>
+	</div>
+	<div class="section" style="display: none;" id="foodlist">
+		<div class="food-wrap"  >
+			<div class="shop-infor"></div>
+			<div class="food-content" id="foodCont">
+				<div class="f-tabs">
+					<div class="move-item">
+						<span class="f-notic">公告</span>
+						<span class="infor-notice"></span>
+					</div>
+					<div class="main-tabs">
+					<span class="tab-left tabon">商品</span><span class="tab-right">商家</span></div>
+				</div>
+				<div class="f-list" >
+					<div class="food-menu">
+						<div class="menu-wrap"></div>
+					</div>
+					<div class="food-detial">
+						<div class="flist-wrap">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cartfooter" _v-fd8ba416="" style="z-index: 11;"><span class="carticon" _v-fd8ba416="" attr-quantity="4"></span><div class="cartprice" _v-fd8ba416=""><span class="carttotal" _v-fd8ba416="">¥7</span> <span class="cartdelivery" _v-fd8ba416="">配送费:&nbsp;¥5</span></div><a href="javascript:" class="submitbutton" _v-fd8ba416="">去结算</a></div>
+		</div>
+		<div class="info-mask" style="display: none;"></div>
+	</div>
+
+
+	<script>
+		function store(nameSpace, data){
+			//多态的写法： 同一个api/接口/函数/方法，它们可以执行不一样的功能
+			//在js中利用传参的不一样，实现多态
+			//性能的优化，减少必要http请求的次数，并且提高响应速度
+			if(data) {
+				//存数据操作
+				return localStorage.setItem(nameSpace, JSON.stringify(data));
+			}
+			//取数据操作而且做了安全方面校验
+			return (nameSpace && JSON.parse(localStorage.getItem(nameSpace))) || null;
+		}
+
+		window.paceOptions = {
+			ajax: {
+			  ignoreURLs: [ /search/,/home/,/shops/,/foodlist/]
+			}
+		}
+
+
+	</script>
+	<script src="plugin/rem.js"></script>
+	<script src="plugin/hammer.js"></script>
+	<script src="plugin/zepto.js"></script>
+	<script src="plugin/director.js"></script>
+	<script src="plugin/fastclick.js"></script>
+	<script src="plugin/pace.js"></script>
+	<script src="plugin/iscroll.js"></script>
+	<script src="plugin/swiper-3.3.1.jquery.min.js"></script>
+	<script src="module/home.js"></script>
+	<script src="module/search.js"></script>
+	<script src="module/shops.js"></script>
+	<script src="module/foodslist.js"></script>
+	<script src="route.js"></script>
+	<script src="index.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	<style type="text/css">
+		.box {
+			height: 100px;
+			width: 100px;background: red;
+			position: absolute;
+			top:300px;
+			left: 600px;
+			 transform:translateY(800px);
+            -webkit-transition:all 5s 0 ease-in-out;
+        	-moz-transition:all 5s 0 ease-in-out;
+			/*-webkit-animation: slideOutUp 1s 1 linear both 0.5s;
+  			animation: slideOutUp 1s 1 linear both 0.5s;*/
+		}
+		
+	</style>
+</head>
+<body>
+	<!-- <div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide" style="background: red">Slide 1</div>
+	        <div class="swiper-slide" style="background: blue">Slide 2</div>
+	        <div class="swiper-slide" style="background: green">Slide 3</div>
+	         <div class="swiper-slide" style="background: red">Slide 4</div>
+	        <div class="swiper-slide" style="background: blue">Slide 5</div>
+	        <div class="swiper-slide" style="background: green">Slide 6</div>	        
+
+	    </div>
+	     如果需要分页器 -->
+	   <!--  <div class="swiper-pagination"></div>
+	    
+	 
+	    
+	    如果需要滚动条
+	    <div class="swiper-scrollbar"></div>
+	</div> --> 
+
+	<!-- <div></div>
+	<div></div>
+	<div></div>
+	<div></div> -->
+	
+	<div class="box">
+		
+	</div>
+
+</body>
+	<script src="plugin/zepto.js"></script>
+<script src="plugin/swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper ('.swiper-container', {
+		     
+		slidesPerView : 2,
+		slidesPerColumn : 2,
+  		})        
+</script>
+</html>

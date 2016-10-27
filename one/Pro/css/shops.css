@@ -1,0 +1,235 @@
+#shops {
+	height: auto;
+	position: relative;
+}
+#backto-top {
+	position: absolute;
+	z-index: 100;
+	right: 0.853333rem;
+	display: none;
+	color: rgba(255,0,0,.3);
+}
+#shops .onfixed {
+	position: absolute;
+	left: 0;
+	z-index: 101;
+	-webkit-transform: translateZ(0);
+}
+.shop-wrap {
+	height: auto;
+	width: 100%;
+}
+.sp-login {
+	margin-right: 0.213333rem;
+}
+.sp-title {
+	width: 100%;
+	height: 1.7rem;
+	background: #3190e8;
+	display: -webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-justify-content:space-between;
+	-webkit-align-items:center;
+	font-size: 16px;
+	color: white;
+	padding: 0 0.213333rem;
+	padding-left: 0.426667rem;
+	box-sizing: border-box;
+}
+.sp-address {
+	font-weight: bold;
+}
+.sp-slide {
+	width: 100%;
+	height: 5.72rem;
+	background: white;
+	overflow: hidden;
+	position: relative;
+}
+#goSearch {
+	color: white
+}
+.slide-wrap {
+	width: 200%;
+	height: 100%;
+	display: -webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-justify-content:center;
+	-webkit-align-items:center;
+	-webkit-flex-wrap:wrap;
+}
+.list-wrap {
+	box-sizing: content-box;
+}
+.slide-wrap a {
+	box-sizing: border-box;
+	font-size: 12px;
+	width: 12.5%;
+	height: 2.36rem;
+	display: -webkit-flex;
+	-webkit-flex-direction:column;
+	-webkit-justify-content:space-around;
+	-webkit-align-items:center;
+}
+.slide-wrap span {
+	font-size: 12px;
+}
+.imgList {
+	width: 1.2rem;
+	height: 1.2rem;
+	display: block;
+	margin-right: 0.213333rem;
+}
+.imgList img {
+	width: 100%;
+	height: 100%;
+}
+.sp-list {
+	width: 100%;
+	background: white;
+	margin-top: 0.32rem;
+}
+.nearby {
+	width: 100%;
+	display: -webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-justify-content:flex-start;
+	-webkit-align-items:center;
+	font-size: 0.341333rem;
+	padding: 0.213333rem 0;
+	padding-left: 0.813333rem;
+	box-sizing: border-box;
+	color:#999;
+}
+.sp-item {
+	width: 100%;
+	height: 3.2rem;
+	font-size: 0.213333rem;
+	display: -webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-justify-content:flex-start;
+	-webkit-align-items:center;
+	padding: 0  0.813333rem;
+	padding-right: 0.413333rem;
+	box-sizing: border-box;
+	box-shadow: 0 1px 0 1px #eee;
+	color: #333;
+
+}
+.item-img {
+	width: 2.3rem;
+	height: 80%;
+	display: -webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-justify-content:center;
+	-webkit-align-items:center;
+}
+.item-img img {
+	width: 90%;
+	height: 90%;
+}
+.item-content {
+	-webkit-flex:5;
+	display: -webkit-flex;
+	-webkit-flex-direction:column;
+	-webkit-justify-content:space-between;
+	-webkit-align-items:flex-start;
+	padding-left: 0.213333rem;
+	height: 80%;
+}
+.item-right {
+	-webkit-flex:3;
+	display: -webkit-flex;
+	-webkit-flex-direction:column;
+	-webkit-justify-content:space-between;
+	-webkit-align-items:flex-end;
+	height: 78%;
+}
+.shop-rank ,.shop-send ,.shop-title{
+	display: -webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-justify-content:flex-start;
+	-webkit-align-items:center;
+	height: 80%;
+
+}
+.shop-title {
+	font-size: 0.298667rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	width: 5.5rem;
+	font-weight: bold;
+}
+.shop-title-or:before {
+	margin-right: .133333rem;
+    padding:  .086667rem 0;
+    height: .4rem;
+    border-radius: .053333rem;
+    background-color: #ffd930;
+    color: #52250a;
+    content: "\54C1\724C";
+    vertical-align: top;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.213333rem;
+    line-height: .4rem;
+    width: 1.653333rem;
+}
+.score {
+	color: #ff6000;
+}
+.shop-send span {
+	padding: 0 0.213333rem;
+	color: #666
+}
+.shop-rank span {
+	padding: 0 0.106667rem;
+}
+.dis-time span ,.shop-gur {
+	padding:0 0.106667rem;
+}
+.send-arrive {
+	display: -webkit-flex;
+	-webkit-flex-direction:row;
+	-webkit-justify-content:flex-end;
+	-webkit-align-items:center;
+}
+.send-arrive span  {
+	font-size: 0.213333rem;
+
+}
+.send-arrive .beat {
+	background: #2395ff;
+	color: white;
+	border-radius:0.042667rem;
+	margin-right: 0.206667rem;
+	border: 1px solid #2395ff;
+}
+.send-arrive .arr-ontime {
+	box-shadow: 0 0 1px 1px #2395ff;
+	text-align: center;
+	color: #2395ff;
+}
+.shop-gur {
+	color: rgb(153, 153, 153);
+	border: 1px solid rgb(221, 221, 221);
+}
+.distance {
+	color:  rgb(153, 153, 153);
+}
+.ontime {
+	color: #2395ff;
+}
+.solds {
+	color: #666;
+}
+.noShops {
+	width: 100%;
+	height: 1.706667rem;
+	line-height: 1.706667rem;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 0.213333rem;
+	color: #333;
+}
