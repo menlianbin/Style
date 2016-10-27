@@ -6,6 +6,8 @@ var routeControl = (function(){
 		"search":searchObj,
 		"shops":shopObj,
 		"foodlist":foodlistObj
+
+		
 	}
 	var curModule = null; //当前模块
 	var preModule = null; //前一个模块
